@@ -9,12 +9,12 @@ public class QueueDev {
         values.add(value);
     }
 
-    public int remove(){
+    public int remove() {
         if (this.notEmpty()) return values.remove(0);
         return -1;
     }
 
-    public int peek(){
+    public int peek() {
         if (this.notEmpty()) return values.get(0);
         return -1;
     }
@@ -23,7 +23,7 @@ public class QueueDev {
         return !this.values.isEmpty();
     }
 
-    public int size(){
+    public int size() {
         return values.size();
     }
 

@@ -1,5 +1,8 @@
 package Queue;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Main {
     public static void main(String[] args) {
         // Minha implementação de Fila (Queue)
@@ -16,5 +19,19 @@ public class Main {
 
         System.out.println("Próximo da fila: " + queueDev.peek());
         System.out.println("Tamanho da fila: " + queueDev.size());
+
+        // Nativo (java.util.Queue) // Por ser interface, utilizamos através do LinkedList
+        Queue<String> queue = new LinkedList<>();
+
+        queue.add("Primeiro");
+        queue.add("Segundo");
+        queue.add("Terceiro");
+
+        System.out.println("Item do topo: " + queue.peek());
+        System.out.println("Elemento removido: " + queue.poll());
+        System.out.println("Item do topo: " + queue.peek());
+        System.out.println("Tamanho da fila: " + queue.size());
+        System.out.println("A fila está vazia? " + queue.isEmpty());
+        System.out.println(queue);
     }
 }

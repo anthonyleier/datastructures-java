@@ -1,5 +1,7 @@
 package LinkedList;
 
+import java.util.LinkedList;
+
 public class Main {
     public static void main(String[] args) {
         // Minha implementação de LinkedList
@@ -26,5 +28,22 @@ public class Main {
         System.out.println("Último elemento: " + linkedListDev.getLast());
         System.out.println("Último elemento removido: " + linkedListDev.removeLast());
         System.out.println(linkedListDev);
+
+        // Nativo (java.util.LinkedList)
+        LinkedList<String> linkedList = new LinkedList<>();
+
+        linkedList.add("Primeiro");
+        linkedList.add("Segundo");
+        linkedList.add("Terceiro");
+
+        linkedList.addFirst("Zero");
+        linkedList.add(2, "Dois");
+
+        System.out.println("Tamanho da lista: " + linkedList.size());
+        System.out.println("A lista está vazia? " + linkedList.isEmpty());
+        System.out.println("Elemento na posição 1: " + linkedList.get(1));
+        System.out.println("Elemento removido: " + linkedList.remove(3));
+        System.out.println("A lista contém Terceiro? " + linkedList.contains("Terceiro"));
+        System.out.println(linkedList);
     }
 }

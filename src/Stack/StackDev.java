@@ -23,7 +23,7 @@ public class StackDev {
         return !this.values.isEmpty();
     }
 
-    public int size(){
+    public int size() {
         return values.size();
     }
 
