@@ -9,11 +9,21 @@ public class Main {
         linkedList.add(89);
         linkedList.add(23);
         System.out.println(linkedList);
+
         System.out.println(linkedList.get(0));
         System.out.println(linkedList.get(1));
-        System.out.println(linkedList.get(2));
-        System.out.println(linkedList.get(3));
-        System.out.println(linkedList.get(4));
-        System.out.println(linkedList.get(5));
+        System.out.println(linkedList);
+
+        System.out.println(linkedList.getFirst());
+        System.out.println(linkedList.removeFirst());
+        System.out.println(linkedList);
+
+        System.out.println(linkedList.getLast());
+        System.out.println(linkedList.removeLast());
+        System.out.println(linkedList);
+
+        System.out.println(linkedList.getLast());
+        System.out.println(linkedList.removeLast());
+        System.out.println(linkedList);
     }
 }

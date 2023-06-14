@@ -38,6 +38,31 @@ public class LinkedList {
         return currentNode.value;
     }
 
+    public int getFirst() {
+        return this.head.value;
+    }
+
+    public int getLast() {
+        return this.last.value;
+    }
+
+    public int removeFirst() {
+        Node first = this.head;
+        this.head = first.next;
+        return first.value;
+    }
+
+    public int removeLast() {
+        Node currentNode = this.head;
+        Node last = this.last;
+        while (currentNode.next != this.last) {
+            currentNode = currentNode.next;
+        }
+        currentNode.next = null;
+        this.last = currentNode;
+        return last.value;
+    }
+
     @Override
     public String toString() {
         StringBuilder message = new StringBuilder();
