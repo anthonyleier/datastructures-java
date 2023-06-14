@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Stack {
     private final ArrayList<Integer> values = new ArrayList<>();
 
-    Stack(int value){
+    Stack(int value) {
         values.add(value);
     }
 
@@ -13,8 +13,22 @@ public class Stack {
         values.add(value);
     }
 
-    public int remove(){
-        return values.remove(values.size()-1);
+    public int remove() {
+        if (this.notEmpty()) return values.remove(values.size() - 1);
+        return -1;
+    }
+
+    public int peek() {
+        if (this.notEmpty()) return values.get(values.size() - 1);
+        return -1;
+    }
+
+    public boolean notEmpty() {
+        return !this.values.isEmpty();
+    }
+
+    public int getSize(){
+        return values.size();
     }
 
     @Override
