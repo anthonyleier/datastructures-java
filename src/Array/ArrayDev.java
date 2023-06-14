@@ -1,8 +1,8 @@
-package Arrays;
+package Array;
 
 import java.util.Arrays;
 
-public class ArraysDev {
+public class ArrayDev {
     public static void main(String[] args) {
         int[] numbers = {23,32,12,56,78,98,234,452,429,530,1,5,7,8};
         String[] names = {"Anthony", "Luiz", "Wendel", "Marilia"};
