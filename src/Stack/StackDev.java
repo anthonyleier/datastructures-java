@@ -2,7 +2,7 @@ package Stack;
 
 import java.util.ArrayList;
 
-public class Stack {
+public class StackDev {
     private final ArrayList<Integer> values = new ArrayList<>();
 
     public void add(int value) {

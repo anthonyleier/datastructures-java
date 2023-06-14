@@ -2,7 +2,7 @@ package Queue;
 
 import java.util.ArrayList;
 
-public class Queue {
+public class QueueDev {
     private final ArrayList<Integer> values = new ArrayList<>();
 
     public void add(int value) {

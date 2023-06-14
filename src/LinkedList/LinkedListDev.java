@@ -1,11 +1,11 @@
 package LinkedList;
 
-public class LinkedList {
+public class LinkedListDev {
     private Node head;
     private Node last;
     private int size;
 
-    LinkedList() {
+    LinkedListDev() {
         this.head = null;
         this.last = null;
         this.size = 0;
