@@ -5,10 +5,6 @@ import java.util.ArrayList;
 public class Stack {
     private final ArrayList<Integer> values = new ArrayList<>();
 
-    Stack(int value) {
-        values.add(value);
-    }
-
     public void add(int value) {
         values.add(value);
     }
@@ -27,7 +23,7 @@ public class Stack {
         return !this.values.isEmpty();
     }
 
-    public int getSize(){
+    public int size(){
         return values.size();
     }
 

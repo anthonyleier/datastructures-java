@@ -2,7 +2,7 @@ package Stack;
 
 public class Main {
     public static void main(String[] args) {
-        Stack stack = new Stack(15);
+        Stack stack = new Stack();
         stack.add(30);
         stack.add(45);
         stack.add(60);
@@ -13,7 +13,7 @@ public class Main {
         System.out.println("Elemento removido: " + stack.remove());
         System.out.println(stack);
 
-        System.out.println("Item do topo: " +stack.peek());
-        System.out.println("Tamanho da pilha: " + stack.getSize());
+        System.out.println("Item do topo: " + stack.peek());
+        System.out.println("Tamanho da pilha: " + stack.size());
     }
 }
