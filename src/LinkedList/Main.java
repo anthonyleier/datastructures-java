@@ -10,20 +10,20 @@ public class Main {
         linkedList.add(23);
         System.out.println(linkedList);
 
-        System.out.println(linkedList.get(0));
-        System.out.println(linkedList.get(1));
+        System.out.println("Item do índice 0: " + linkedList.get(0));
+        System.out.println("Item do índice 1: " + linkedList.get(1));
         System.out.println(linkedList);
 
-        System.out.println(linkedList.getFirst());
-        System.out.println(linkedList.removeFirst());
+        System.out.println("Primeiro elemento: " + linkedList.getFirst());
+        System.out.println("Primeiro elemento removido: " + linkedList.removeFirst());
         System.out.println(linkedList);
 
-        System.out.println(linkedList.getLast());
-        System.out.println(linkedList.removeLast());
+        System.out.println("Último elemento: " + linkedList.getLast());
+        System.out.println("Último elemento removido: " + linkedList.removeLast());
         System.out.println(linkedList);
 
-        System.out.println(linkedList.getLast());
-        System.out.println(linkedList.removeLast());
+        System.out.println("Último elemento: " + linkedList.getLast());
+        System.out.println("Último elemento removido: " + linkedList.removeLast());
         System.out.println(linkedList);
     }
 }
