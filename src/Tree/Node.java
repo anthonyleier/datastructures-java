@@ -1,16 +1,20 @@
 package Tree;
 
 public class Node {
-    private final String value;
+    private int value;
     private Node left;
     private Node right;
 
-    Node(String value) {
+    Node(int value) {
         this.value = value;
     }
 
-    public String getValue() {
+    public int getValue() {
         return value;
+    }
+
+    public void setValue(int value){
+        this.value = value;
     }
 
     public Node getLeft() {

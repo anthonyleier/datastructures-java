@@ -4,15 +4,19 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class BinaryTreeDev {
-    private final Node root;
+    private Node root;
 
-    BinaryTreeDev(Node root) {
+    public Node getRoot(){
+        return this.root;
+    }
+
+    public void setRoot(Node root){
         this.root = root;
     }
 
     private void inOrderTraversal(Node node) {
         if (node.getLeft() != null) inOrderTraversal(node.getLeft());
-        System.out.print(node.getValue());
+        System.out.print(node.getValue() + ",");
         if (node.getRight() != null) inOrderTraversal(node.getRight());
     }
 
@@ -24,7 +28,7 @@ public class BinaryTreeDev {
     private void postOrderTraversal(Node node) {
         if (node.getLeft() != null) postOrderTraversal(node.getLeft());
         if (node.getRight() != null) postOrderTraversal(node.getRight());
-        System.out.print(node.getValue());
+        System.out.print(node.getValue() + ",");
     }
 
     public void printPostOrderTraversal() {
@@ -42,7 +46,7 @@ public class BinaryTreeDev {
             if (node != null){
                 if (node.getLeft() != null)queue.add(node.getLeft());
                 if (node.getRight() != null)queue.add(node.getRight());
-                System.out.print(node.getValue());
+                System.out.print(node.getValue() + ",");
             }
         }
     }

@@ -1,16 +1,16 @@
 package Tree;
 
 public class Main {
-    public static void main(String[] args) {
-        Node n1 = new Node("a");
-        Node n2 = new Node("+");
-        Node n3 = new Node("*");
-        Node n4 = new Node("b");
-        Node n5 = new Node("-");
-        Node n6 = new Node("/");
-        Node n7 = new Node("c");
-        Node n8 = new Node("d");
-        Node n9 = new Node("e");
+    public static void binaryTreeTest() {
+        Node n1 = new Node(1);
+        Node n2 = new Node(2);
+        Node n3 = new Node(3);
+        Node n4 = new Node(4);
+        Node n5 = new Node(5);
+        Node n6 = new Node(6);
+        Node n7 = new Node(7);
+        Node n8 = new Node(8);
+        Node n9 = new Node(9);
 
         n6.setLeft(n7);
         n6.setRight(n8);
@@ -21,41 +21,53 @@ public class Main {
         n2.setLeft(n1);
         n2.setRight(n3);
 
-        BinaryTreeDev inOrderTree = new BinaryTreeDev(n2);
-        inOrderTree.printInOrderTraversal();
-        System.out.println("Altura: " + inOrderTree.getHeight());
+        BinaryTreeDev binaryTreeDev = new BinaryTreeDev();
+        binaryTreeDev.setRoot(n2);
 
-        Node n10 = new Node("I");
-        Node n11 = new Node("N");
-        Node n12 = new Node("S");
-        Node n13 = new Node("C");
-        Node n14 = new Node("R");
-        Node n15 = new Node("E");
-        Node n16 = new Node("V");
-        Node n17 = new Node("A");
-        Node n18 = new Node("-");
-        Node n19 = new Node("S");
-        Node n20 = new Node("E");
+        binaryTreeDev.printInOrderTraversal();
+        binaryTreeDev.printPostOrderTraversal();
+        binaryTreeDev.printLevelOrderTraversal();
 
-        n20.setLeft(n15);
-        n20.setRight(n19);
+        System.out.println("Altura: " + binaryTreeDev.getHeight());
+    }
 
-        n15.setLeft(n10);
-        n15.setRight(n14);
+    public static void binarySearchTreeTest() {
+        BinarySearchTreeDev binarySearchTreeDev = new BinarySearchTreeDev();
+        binarySearchTreeDev.insert(61);
+        binarySearchTreeDev.insert(89);
+        binarySearchTreeDev.insert(100);
+        binarySearchTreeDev.insert(90);
+        binarySearchTreeDev.insert(66);
+        binarySearchTreeDev.insert(43);
+        binarySearchTreeDev.insert(51);
+        binarySearchTreeDev.insert(16);
+        binarySearchTreeDev.insert(55);
+        binarySearchTreeDev.insert(11);
+        binarySearchTreeDev.insert(79);
+        binarySearchTreeDev.insert(77);
+        binarySearchTreeDev.insert(82);
+        binarySearchTreeDev.insert(32);
 
-        n14.setLeft(n11);
-        n14.setRight(n13);
+        binarySearchTreeDev.printInOrderTraversal();
+        binarySearchTreeDev.printPostOrderTraversal();
+        binarySearchTreeDev.printLevelOrderTraversal();
 
-        n13.setRight(n12);
-        n19.setLeft(n17);
-        n17.setRight(n16);
-        n19.setRight(n18);
+        System.out.println("Altura: " + binarySearchTreeDev.getHeight());
+        System.out.println("Resultado da busca: " + binarySearchTreeDev.getValue(30).getRoot());
+        System.out.println("Resultado da busca: " + binarySearchTreeDev.getValue(55).getRoot().getValue());
+        System.out.println("Menor valor: " + binarySearchTreeDev.getLowestValue().getRoot().getValue());
+        System.out.println("Maior valor: " + binarySearchTreeDev.getHighestValue().getRoot().getValue());
 
-        BinaryTreeDev postOrderTree = new BinaryTreeDev(n20);
-        postOrderTree.printPostOrderTraversal();
-        System.out.println("Altura: " + postOrderTree.getHeight());
+        binarySearchTreeDev.printInOrderTraversal();
+        binarySearchTreeDev.remove(55);
+        binarySearchTreeDev.remove(90);
+        binarySearchTreeDev.remove(66);
+        binarySearchTreeDev.printInOrderTraversal();
+    }
 
-        inOrderTree.printLevelOrderTraversal();
-        postOrderTree.printLevelOrderTraversal();
+
+    public static void main(String[] args) {
+        binaryTreeTest();
+        binarySearchTreeTest();
     }
 }
